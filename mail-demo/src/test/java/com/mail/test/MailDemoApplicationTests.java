@@ -1,3 +1,4 @@
+package com.mail.test;
 /*package com.opencodez;
 
 import org.junit.Test;
