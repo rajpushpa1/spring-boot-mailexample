@@ -8,17 +8,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Map;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import com.opencodez.util.AppUtil;
 import com.opencodez.util.Constants;
 
-/**
- * @author pavan.solapure
- *
- */
 @Component
 public class EmailTemplate {
 
@@ -26,9 +20,7 @@ public class EmailTemplate {
 
 	private String template;
 
-	private Map<String, String> replacementParams; 
-	
-	
+	private Map<String, String> replacementParams;
 
 	public void Template(String templateId) {
 		this.templateId = templateId;
@@ -41,14 +33,15 @@ public class EmailTemplate {
 
 	public String loadTemplate(String templateId) throws Exception {
 		ClassLoader classLoader = getClass().getClassLoader();
-		File file = new File(classLoader.getResource("email-templates/" + templateId).getFile());
+		File file = new File(classLoader.getResource(
+				"email-templates/" + templateId).getFile());
 		String content = Constants.BLANK;
 		try {
 			content = new String(Files.readAllBytes(file.toPath()));
 		} catch (IOException e) {
 
 		}
-		
+
 		System.out.println("content" + content);
 		return content;
 	}
@@ -58,54 +51,34 @@ public class EmailTemplate {
 
 		if (!AppUtil.isObjectEmpty(cTemplate)) {
 			for (Map.Entry<String, String> entry : replacements.entrySet()) {
-				cTemplate = cTemplate.replace("{{" + entry.getKey() + "}}", entry.getValue());
+				cTemplate = cTemplate.replace("{{" + entry.getKey() + "}}",
+						entry.getValue());
 			}
 		}
-		
+
 		return cTemplate;
 	}
 
-	/**
-	 * @return the templateId
-	 */
 	public String getTemplateId() {
 		return templateId;
 	}
 
-	/**
-	 * @param templateId
-	 *            the templateId to set
-	 */
 	public void setTemplateId(String templateId) {
 		this.templateId = templateId;
 	}
 
-	/**
-	 * @return the template
-	 */
 	public String getTemplate() {
 		return template;
 	}
 
-	/**
-	 * @param template
-	 *            the template to set
-	 */
 	public void setTemplate(String template) {
 		this.template = template;
 	}
 
-	/**
-	 * @return the replacementParams
-	 */
 	public Map<String, String> getReplacementParams() {
 		return replacementParams;
 	}
 
-	/**
-	 * @param replacementParams
-	 *            the replacementParams to set
-	 */
 	public void setReplacementParams(Map<String, String> replacementParams) {
 		this.replacementParams = replacementParams;
 	}

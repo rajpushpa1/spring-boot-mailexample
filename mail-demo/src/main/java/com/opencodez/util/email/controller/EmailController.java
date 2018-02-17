@@ -20,11 +20,6 @@ import com.opencodez.util.Constants;
 import com.opencodez.util.email.Email;
 import com.opencodez.util.email.EmailService;
 import com.opencodez.util.email.EmailTemplate;
-
-/**
- * @author
- *
- */
 @RestController
 @RequestMapping("/api")
 public class EmailController {
@@ -40,10 +35,10 @@ public class EmailController {
 		List<String> to = Arrays.asList("rajpushpa025@gmail.com");
 		String subject = Constants.SUBJECT;
 
-		emailTemplate.Template("hello-world.html");
+		emailTemplate.Template("template.html");
 
 		Map<String, String> replacements = new HashMap<String, String>();
-		replacements.put("user", "Pavan");
+		replacements.put("user", "raj");
 		replacements.put("today", String.valueOf(new Date()));
 		String message = emailTemplate.getTemplate(replacements);
 

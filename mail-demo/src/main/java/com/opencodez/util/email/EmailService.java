@@ -13,10 +13,7 @@ import org.springframework.stereotype.Component;
 
 import com.opencodez.util.ApplicationLogger;
 
-/**
- * @author pavan.solapure
- *
- */
+
 @Component
 public class EmailService {
 
