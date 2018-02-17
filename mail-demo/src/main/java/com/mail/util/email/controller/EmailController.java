@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.opencodez.util.email.controller;
+package com.mail.util.email.controller;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opencodez.util.Constants;
-import com.opencodez.util.email.Email;
-import com.opencodez.util.email.EmailService;
-import com.opencodez.util.email.EmailTemplate;
+import com.mail.util.Constants;
+import com.mail.util.email.Email;
+import com.mail.util.email.EmailService;
+import com.mail.util.email.EmailTemplate;
 @RestController
 @RequestMapping("/api")
 public class EmailController {

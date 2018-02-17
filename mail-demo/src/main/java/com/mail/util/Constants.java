@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.opencodez.util;
+package com.mail.util;
 
 public class Constants {
 

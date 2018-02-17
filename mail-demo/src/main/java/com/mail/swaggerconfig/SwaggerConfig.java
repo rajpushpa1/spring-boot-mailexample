@@ -1,4 +1,4 @@
-package com.opencodez.swaggerconfig;
+package com.mail.swaggerconfig;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 

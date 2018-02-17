@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.opencodez.util.email;
+package com.mail.util.email;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +10,8 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.opencodez.util.AppUtil;
-import com.opencodez.util.Constants;
+import com.mail.util.AppUtil;
+import com.mail.util.Constants;
 
 @Component
 public class EmailTemplate {

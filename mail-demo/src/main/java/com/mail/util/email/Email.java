@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.opencodez.util.email;
+package com.mail.util.email;
 
 import java.util.List;
 
 import org.springframework.context.annotation.Configuration;
 
-import com.opencodez.util.AppUtil;
+import com.mail.util.AppUtil;
 
 @Configuration
 public class Email {
